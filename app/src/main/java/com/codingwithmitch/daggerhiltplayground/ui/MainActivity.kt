@@ -55,10 +55,10 @@ class MainActivity : AppCompatActivity() {
         val sb = StringBuilder()
         for (blog in blogs) {
             sb.append(blog.title + "\n")
-            sb.append(blog.body + "\n")
+//            sb.append(blog.body + "\n")
         }
         text.text = sb.toString()
-        body.text = sb.toString()
+//        body.text = sb.toString()
     }
 
     private fun displayProgressBar(isDisplayed: Boolean) {
