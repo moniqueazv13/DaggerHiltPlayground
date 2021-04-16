@@ -1,34 +1,46 @@
 package com.codingwithmitch.daggerhiltplayground.room
 
 import com.codingwithmitch.daggerhiltplayground.model.Blog
-import com.codingwithmitch.daggerhiltplayground.retrofit.BlogNetworkEntity
 import com.codingwithmitch.daggerhiltplayground.util.EntityMapper
 import javax.inject.Inject
 
 class CacheMapper
-@Inject constructor() :
+@Inject
+constructor():
     EntityMapper<BlogCacheEntity, Blog> {
+
     override fun mapFromEntity(entity: BlogCacheEntity): Blog {
         return Blog(
             id = entity.id,
             title = entity.title,
             body = entity.body,
-            category = entity.category,
-            image = entity.image
+            image = entity.image,
+            category = entity.category
         )
     }
 
-    override fun mapToEntitiy(domainModel: Blog): BlogCacheEntity {
+    override fun mapToEntity(domainModel: Blog): BlogCacheEntity {
         return BlogCacheEntity(
             id = domainModel.id,
             title = domainModel.title,
             body = domainModel.body,
-            category = domainModel.category,
-            image = domainModel.image
+            image = domainModel.image,
+            category = domainModel.category
         )
     }
 
-    fun mapFromEntityList(entitie: List<BlogCacheEntity>): List<Blog> {
-        return entitie.map { mapFromEntity(it) }
+    fun mapFromEntityList(entities: List<BlogCacheEntity>): List<Blog>{
+        return entities.map { mapFromEntity(it) }
     }
 }
+
+
+
+
+
+
+
+
+
+
+

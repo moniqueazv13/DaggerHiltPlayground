@@ -8,7 +8,6 @@ class NetworkMapper
 @Inject
 constructor() :
     EntityMapper<BlogNetworkEntity, Blog> {
-
     override fun mapFromEntity(entity: BlogNetworkEntity): Blog {
         return Blog(
             id = entity.id,
@@ -19,7 +18,7 @@ constructor() :
         )
     }
 
-    override fun mapToEntitiy(domainModel: Blog): BlogNetworkEntity {
+    override fun mapToEntity(domainModel: Blog): BlogNetworkEntity {
         return BlogNetworkEntity(
             id = domainModel.id,
             title = domainModel.title,
@@ -33,3 +32,23 @@ constructor() :
         return entities.map { mapFromEntity(it) }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

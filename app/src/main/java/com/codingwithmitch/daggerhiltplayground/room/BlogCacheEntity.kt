@@ -5,8 +5,8 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "blogs")
-//armazenar em cache os dados da Api
-data class BlogCacheEntity(
+class BlogCacheEntity(
+
     @PrimaryKey(autoGenerate = false)
     @ColumnInfo(name = "id")
     var id: Int,
@@ -23,3 +23,6 @@ data class BlogCacheEntity(
     @ColumnInfo(name = "category")
     var category: String
 )
+
+
+
