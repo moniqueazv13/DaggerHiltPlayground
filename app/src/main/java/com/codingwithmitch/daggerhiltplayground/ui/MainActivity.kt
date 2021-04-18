@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         subscribeObservers()
+
         viewModel.setStateEvent(MainStateEvent.GetBlogsEvent)
     }
 
@@ -51,6 +52,8 @@ class MainActivity : AppCompatActivity() {
         if (message != null) text.text = message else text.text = "Unknown error."
     }
 
+
+    //TODO: criar recycler
     private fun appendBlogTitles(blogs: List<Blog>) {
         val sb = StringBuilder()
         for (blog in blogs) {

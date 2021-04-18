@@ -21,8 +21,8 @@ constructor(
 ): ViewModel() {
 
     private val _dataState: MutableLiveData<DataState<List<Blog>>> = MutableLiveData()
-
     val dataState: LiveData<DataState<List<Blog>>>
+
         get() = _dataState
 
     fun setStateEvent(mainStateEvent: MainStateEvent){
@@ -30,6 +30,8 @@ constructor(
             when(mainStateEvent){
                 is GetBlogsEvent -> {
                     mainRepository.getBlogs()
+
+                            //para cada lista de blog ele salva no livedata
                         .onEach {dataState ->
                             _dataState.value = dataState
                         }

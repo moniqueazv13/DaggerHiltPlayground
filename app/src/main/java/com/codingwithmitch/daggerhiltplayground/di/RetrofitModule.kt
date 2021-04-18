@@ -15,7 +15,6 @@ import javax.inject.Singleton
 @InstallIn(ApplicationComponent::class)
 object RetrofitModule {
 
-
     @Singleton
     @Provides
     fun provideGsonBuilder(): Gson {
@@ -39,7 +38,6 @@ object RetrofitModule {
             .build()
             .create(BlogRetrofit::class.java)
     }
-
 }
 
 
