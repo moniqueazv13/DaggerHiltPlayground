@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
     private val recycler by lazy { findViewById<RecyclerView>(R.id.recycler) }
 
-    private val blogsAdapter by lazy { BlogAdapter() }
+    private val blogsAdapter by lazy { BlogAdapter(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
