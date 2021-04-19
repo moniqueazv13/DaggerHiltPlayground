@@ -8,12 +8,15 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.annotation.GlideModule
 import com.codingwithmitch.daggerhiltplayground.R
 import com.codingwithmitch.daggerhiltplayground.model.Blog
 import com.codingwithmitch.daggerhiltplayground.ui.MainActivity
 import com.squareup.picasso.Picasso
+import kotlin.coroutines.coroutineContext
 
 class BlogAdapter(private val context: Context) : RecyclerView.Adapter<BlogViewHolder>() {
+
     var blogList = listOf<Blog>()
         set(value) {
             field = value
@@ -32,7 +35,7 @@ class BlogAdapter(private val context: Context) : RecyclerView.Adapter<BlogViewH
     override fun onBindViewHolder(holder: BlogViewHolder, position: Int) {
         val blogs = blogList[position]
         holder.blogTitle.text = blogs.title
-        Glide.with(context).load(blogs.image).into(holder.blogImage)
+        Picasso.with(context).load(blogs.image).into(holder.blogImage)
 
     }
 
