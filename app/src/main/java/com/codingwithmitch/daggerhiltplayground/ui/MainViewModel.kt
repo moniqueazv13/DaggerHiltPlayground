@@ -30,8 +30,7 @@ constructor(
             when(mainStateEvent){
                 is GetBlogsEvent -> {
                     mainRepository.getBlogs()
-
-                            //para cada lista de blog ele salva no livedata
+                            //para cada lista de blog ele adiciona um valor
                         .onEach {dataState ->
                             _dataState.value = dataState
                         }
