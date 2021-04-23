@@ -4,4 +4,4 @@
 2. Cache data with [Room](https://developer.android.com/topic/libraries/architecture/room)
 3. Display cached data in UI
 ## :camera_flash: Screenshot
-<img src="https://github.com/moniqueazv13/DaggerHiltPlayground/blob/9256f18a57b2f5bacc50ab9b93bca9baf77dd9b3/app/src/main/res/drawable/screenshot_home.png" width="260">
+<img src="https://github.com/moniqueazv13/DaggerHiltPlayground/blob/e06582ade732920509ede2422665e074bae17b91/app/src/main/res/drawable/screenshot_home.png" width="260">
