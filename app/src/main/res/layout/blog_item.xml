@@ -2,38 +2,39 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="6dp"
-    app:cardCornerRadius="10dp">
+    android:layout_margin="@dimen/default_margin"
+    app:cardCornerRadius="@dimen/default_margin">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="160dp"
-        android:layout_height="170dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <ImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/blog_image"
-            android:layout_width="160dp"
-            android:layout_height="130dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_launcher_background"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="16:9"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            tools:src="@tools:sample/avatars" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/blog_text"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textAlignment="textStart"
+            android:background="#7F7B87"
+            android:gravity="start"
+            android:padding="@dimen/default_margin"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/blog_image"
-            app:layout_constraintStart_toStartOf="@id/blog_image"
-            app:layout_constraintTop_toBottomOf="@id/blog_image"
-            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit," />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Exemplo filme" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
